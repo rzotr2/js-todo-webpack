@@ -1,4 +1,5 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
 
 /*Обнуление*/
 *{padding: 0;margin: 0;border: 0;}
@@ -15,11 +16,23 @@ ul li{list-style: none;} img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
+/*BOOTSTRAP ICONS*/
+    .bi {
+        vertical-align: middle;
+        line-height: 0;
+    }
+/*BOOTSTRAP ICONS*/
+
+html {
+    font-size: 16px;
+}
+
 
 body {
     background: url("https://images.unsplash.com/photo-1680955886049-ce69173143bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80") center 0 no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-size: 1.2rem;
 }
 
 .loader-container {

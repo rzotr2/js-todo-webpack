@@ -19,10 +19,14 @@ const createListItem = (todo) => {
         </div>
         <div class="todo-list__button">
             <button class="todo-list__edit-button js-edit-button">
-                <span class="todo-list__symbol-edit">&#128393;</span>
+                <span class="todo-list__symbol-edit">
+                    <i class="bi bi-pencil-fill"></i>
+                </span>
             </button>
             <button class="todo-list__delete-button js-delete-button">
-                <span class="todo-list__symbol-delete">&#x2716;</span>
+                <span class="todo-list__symbol-delete">
+                    <i style="font-size: 1.25rem" class="bi bi-x"></i>
+                </span>
             </button>
         </div>
     `;

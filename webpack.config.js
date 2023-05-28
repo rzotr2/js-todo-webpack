@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV === "production";
 
-const stylesHandler = "style-loader";
-
 const config = {
   entry: "./src/index.js",
   output: {
@@ -32,13 +30,16 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "scss-loader", "postcss-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|svg|ttf|woff|png|jpg|gif)$/i,
         type: "asset",
       },
-
+      {
+        test: /\.woff2?$/,
+        type: "asset/resource",
+      }
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
